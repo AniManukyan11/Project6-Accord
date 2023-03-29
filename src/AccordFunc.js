@@ -29,13 +29,8 @@ function AccordionFunc() {
             return (
                 <div key={i} className="content">
                   <div>
-                    <p>{country.name}</p>
-                    <span
-                      className="plus_minus_btn"
-                      onClick={()=>changeActive(country.iso2)}
-                    >
-                      {isActive === country.iso2 ? "-" : "+"}
-                    </span>
+                    <p  className="plus_minus_btn"
+                      onClick={()=>changeActive(country.iso2)}>{country.name}{isActive === country.iso2 ? "-" : "+"}</p>
                   </div>
                   <div
                     className={

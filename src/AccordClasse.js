@@ -24,8 +24,8 @@ export default class Accordion extends Component {
         {this.state.countries.map((country, i)=>{
           return(
             <div key={i}>
-              <p>{country.name}</p>
-              <span onClick={()=>this.changeIsActive(country.iso2)}>{this.state.isActive === country.iso2 ? '-' : '+'}</span>
+              <p onClick={()=>this.changeIsActive(country.iso2)}>{country.name}{this.state.isActive === country.iso2 ? '-' : '+'}</p>
+
               {this.state.isActive === country.iso2 && <p>{country.capital}</p>}
             </div>
           )
